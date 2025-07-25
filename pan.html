@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>MaidConnect - Housemaid Hiring App</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+<style>
+:root {
+--primary: #00b894;
+--secondary: #6c5ce7;
+--bg-light: #f9f9fb;
+--text-dark: #2d3436;
+--white: #ffffff;
+    }
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+    }
+
+  body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--bg-light);
+  color: var(--text-dark);
+  line-height: 1.6;
+    }
+
+    header {
+      background: url('https://deax38zvkau9d.cloudfront.net/prod/assets/images/uploads/services/1708074899how-to-start-cleaning-house.webp') no-repeat center center/cover;
+      color: white;
+      padding: 4rem 1rem 3rem;
+      text-align: center;
+      position: relative;
+    }
+
+    header::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.5);
+    }
+
+    header .content {
+      position: relative;
+      z-index: 1;
+    }
+
+    header img.logo {
+      width: 120px;
+      margin-bottom: 1rem;
+    }
+
+    header h1 {
+      font-size: 2.8rem;
+      font-weight: 700;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      margin-top: 0.5rem;
+    }
+
+    .container {
+      padding: 2rem 1.5rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .section-title {
+      font-size: 2rem;
+      font-weight: 600;
+      color: var(--secondary);
+      margin: 2rem 0 1rem;
+      text-align: center;
+    }
+
+    .categories, .gallery-grid, .testimonial-grid, .maid-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .category, .service-box, .gallery-item {
+      background: white;
+      padding: 1rem 1.5rem;
+      border-radius: 12px;
+      border: 2px solid var(--primary);
+      font-weight: 500;
+      text-align: center;
+      transition: all 0.3s ease;
+      flex: 1 1 200px;
+      max-width: 200px;
+    }
+
+    .category:hover, .service-box:hover {
+      background: var(--primary);
+      color: white;
+    }
+
+    .maid-card, .testimonial {
+      background: white;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+      flex: 1 1 280px;
+      max-width: 300px;
+    }
+
+    .maid-card img, .gallery-item img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-bottom: 2px solid #eee;
+    }
+
+    .maid-card-content, .testimonial-content {
+      padding: 1rem;
+    }
+
+    .maid-card-content h3 {
+      margin-bottom: 0.5rem;
+    }
+
+    .maid-card-content button {
+      margin-top: 10px;
+      width: 100%;
+      padding: 10px;
+      background: var(--secondary);
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    form {
+      background: white;
+      padding: 2rem;
+      border-radius: 15px;
+      margin-top: 3rem;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+    }
+
+    form h3 {
+      margin-bottom: 1rem;
+      color: var(--primary);
+    }
+
+    form input, form textarea {
+      width: 100%;
+      padding: 12px;
+      margin-top: 10px;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+    }
+
+    form button {
+      margin-top: 1rem;
+      background-color: var(--primary);
+      color: white;
+      padding: 12px;
+      border: none;
+      border-radius: 10px;
+      width: 100%;
+      cursor: pointer;
+    }
+
+    .about, .services, .faq {
+      margin-top: 3rem;
+      background: white;
+      padding: 2rem;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+    }
+
+    .faq h4 {
+      margin: 1rem 0 0.5rem;
+      color: var(--secondary);
+    }
+
+    footer {
+      background: #2d3436;
+      color: white;
+      padding: 2rem 1rem;
+      text-align: center;
+      margin-top: 4rem;
+      border-top-left-radius: 30px;
+      border-top-right-radius: 30px;
+    }
+
+    footer a {
+      color: var(--primary);
+      margin: 0 10px;
+    }
+
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2rem;
+      }
+      .section-title {
+        font-size: 1.6rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+  <div class="content">
+  <img src="https://img.freepik.com/premium-vector/maid-vector-logo-design_410429-4201.jpg" alt="MaidConnect Logo" class="logo">
+  <h1>MaidConnect</h1>
+  <p>Trusted Maids. Happy Homes. Easy Hiring.</p>
+  </div>
+  </header>
+
+  <div class="container">
+
+    <!-- Categories -->
+    <h2 class="section-title">Categories</h2>
+    <div class="categories">
+    <div class="category">Cleaning</div>
+    <div class="category">Cooking</div>
+    <div class="category">Babysitting</div>
+    <div class="category">Elderly Care</div>
+    <div class="category">Full-Time</div>
+    <div class="category">Part-Time</div>
+    </div>
+
+    <!-- Available Maids -->
+    <h2 class="section-title">Available Maids</h2>
+    <div class="maid-grid">
+      <div class="maid-card">
+      <img src="https://thumbs.dreamstime.com/b/woman-doing-housework-portrait-happy-young-indian-62123645.jpg" alt="maid1">
+      <div class="maid-card-content">
+      <h3>Rani Sharma</h3>
+      <p>Mumbai | 3 years experience</p>
+      <button>Book Now</button>
+      </div>
+      </div>
+      <div class="maid-card">
+        <img src="https://thumbs.dreamstime.com/b/maid-hotel-hotel-room-smiling-young-cleaning-lady-holding-towels-41588101.jpg?w=768" alt="maid2">
+        <div class="maid-card-content">
+        <h3>Meena Verma</h3>
+        <p>Delhi | 5 years experience</p>
+          <button>Book Now</button>
+        </div>
+</div>
+      <div class="maid-card">
+        <img src="https://t4.ftcdn.net/jpg/03/53/89/07/360_F_353890760_4TJwWPFZkG0C2EbHdAPQ1JNKokPbKQGE.jpg" alt="maid2">
+        <div class="maid-card-content">
+        <h3>Rashmi gupta</h3>
+        <p>Delhi | 6 years experience</p>
+        <button>Book Now</button>
+        </div>
+        </div>
+</div>
+
+    <!-- Gallery -->
+      <h2 class="section-title">Gallery</h2>
+      <div class="gallery-grid">
+      <div class="gallery-item"><img src="https://www.mothertouchservices.com/mtsadmin/image/1696448414_Full-Time%20Maid%20in%20Noida.jpg" alt=""></div>
+      <div class="gallery-item"><img src="https://goodmaidindia.com/wp-content/uploads/2023/10/Untitled-design-40.jpg" alt=""></div>
+      <div class="gallery-item"><img src="https://5.imimg.com/data5/SELLER/Default/2023/2/YN/YY/GS/13725971/maid-service-500x500.jpg" alt=""></div>
+      <div class="gallery-item"><img src="https://almajlisoman.com/wp-content/uploads/2022/09/housemaid.jpg" alt=""></div>
+      <div class="gallery-item"><img src="https://preview.redd.it/whats-a-more-adequate-way-to-refer-to-a-maid-v0-fqgpiw475dsd1.jpeg?width=640&crop=smart&auto=webp&s=5f22262a57057392626e91d55c7598f0b5d09eda" alt=""></div>
+    </div>
+
+    <!-- Services -->
+    <div class="services">
+      <h2 class="section-title">Our Services</h2>
+      <div class="categories">
+      <div class="service-box">Verified Maids</div>
+      <div class="service-box">Background Check</div>
+      <div class="service-box">Flexible Timings</div>
+      <div class="service-box">Emergency Help</div>
+      <div class="service-box">Replacement Guarantee</div>
+      </div>
+    </div>
+
+    <!-- Why Choose Us -->
+    <div class="services">
+      <h2 class="section-title">Why Choose MaidConnect?</h2>
+      <div class="categories">
+      <div class="service-box">100% Verified Maids</div>
+      <div class="service-box">24/7 Customer Support</div>
+      <div class="service-box">Affordable Pricing</div>
+      <div class="service-box">Free Replacements</div>
+      <div class="service-box">Instant Booking</div>
+      </div>
+    </div>
+
+    <!-- Testimonials -->
+    <h2 class="section-title">Happy Clients</h2>
+    <div class="testimonial-grid">
+     <div class="testimonial">
+     <div class="testimonial-content">
+     <p>"I hired a maid from MaidConnect and she’s been a blessing to our home!"</p>
+     <strong>- Neha, Bangalore</strong>
+        </div>
+      </div>
+      <div class="testimonial">
+      <div class="testimonial-content">
+      <p>"Professional, reliable and trustworthy services. Highly recommended."</p>
+      <strong>- Ramesh, Delhi</strong>
+      </div>
+      </div>
+    </div>
+
+    <!-- How It Works -->
+    <div class="about">
+      <h2>How It Works</h2>
+      <ol style="margin-left: 1rem; line-height: 2;">
+      <li>Fill out the booking form with your needs</li>
+      <li>Get matched with verified maids in your area</li>
+      <li>Choose and interview the maid of your choice</li>
+      <li>Start your service and enjoy a clean home!</li>
+      </ol>
+    </div>
+
+    <!-- Booking Form -->
+    <form>
+      <h3>Hire a Maid</h3>
+      <input type="text" placeholder="Your Name" required>
+      <input type="text" placeholder="Contact Number" required>
+      <input type="text" placeholder="City / Area" required>
+      <textarea placeholder="Describe Your Requirements" rows="4" required></textarea>
+      <button type="submit">Submit Request</button>
+    </form>
+
+    <!-- About -->
+    <div class="about">
+      <h2>About MaidConnect</h2>
+      <p>MaidConnect helps you find verified and trusted maids in your city. With years of experience in domestic staffing, we offer full-time, part-time, elderly care, and babysitting services at affordable rates with guaranteed satisfaction.</p>
+    </div>
+
+    <!-- Meet Our Team -->
+    <div class="about">
+      <h2>Meet Our Team</h2>
+      <div class="categories">
+      <div class="service-box"><strong>Riya Kapoor</strong><br>Founder & CEO</div>
+     <div class="service-box"><strong>Vikram Patel</strong><br>Operations Manager</div>
+        <div class="service-box"><strong>Anjali Singh</strong><br>Client Relations</div>
+      </div>
+    </div>
+
+    <!-- Blog Highlights -->
+    <div class="services">
+      <h2 class="section-title">Helpful Resources</h2>
+      <div class="categories">
+        <div class="service-box">Top 5 Qualities of a Reliable Maid</div>
+        <div class="service-box">How to Conduct a Maid Interview</div>
+        <div class="service-box">Cleaning Tips for Busy Families</div>
+      </div>
+    </div>
+
+    <!-- Mobile App Promo -->
+    <div class="about">
+      <h2>Download Our Mobile App</h2>
+      <p>Manage your bookings, chat with support, and more on our mobile app.</p>
+      <div class="categories">
+        <div class="service-box"><a href="#" style="text-decoration: none; color: inherit;">📱 Download for Android</a></div>
+        <div class="service-box"><a href="#" style="text-decoration: none; color: inherit;">🍏 Download for iOS</a></div>
+      </div>
+    </div>
+
+    <!-- FAQ -->
+    <div class="faq">
+      <h2>FAQs</h2>
+      <h4>Is there a background check?</h4>
+      <p>Yes, all our maids go through police and ID verification before hiring.</p>
+      <h4>Do you provide replacements?</h4>
+      <p>Yes, we offer one free replacement within 30 days.</p>
+      <h4>Are services available in my city?</h4>
+      <p>We are available in Mumbai, Delhi, Bangalore, Pune, and Hyderabad.</p>
+    </div>
+
+  </div>
+
+  <footer>
+    <p>&copy; 2025 MaidConnect. All Rights Reserved.</p>
+    <p><a href="#">Privacy Policy</a> | <a href="#">Terms</a> | <a href="#">Contact</a></p>
+  </footer>
+
+</body>
+</html>
